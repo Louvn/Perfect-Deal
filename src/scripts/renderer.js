@@ -1,23 +1,29 @@
 class Renderer {
     constructor() {
-        this.loadTilesets();
 
         this.canvas = document.getElementById("roomCanvas");
         this.tileSize = 16;
         
         this.floorWallsLayer = [];
         this.furnitureLayer = [];
+
     }
 
-    loadTilesets() {
-        this.floorWallsTileset = new Image();
-        this.floorWallsTileset.src = "./assets/floors-walls02.png";
-        
-        this.furnitureTileset = new Image();
-        this.furnitureTileset.src = "./assets/furniture03.png";
+    async loadTilesets() {
 
-        this.smallItemsTileset = new Image();
-        this.smallItemsTileset.src = "./assets/small-items02.png";
+        const loadTileset = (src) => new Promise((resolve) => {
+
+            const tileset = new Image();
+            tileset.src = src;
+
+            tileset.onload = () => resolve(tileset);
+        });
+
+        [this.floorWallsTileset, this.furnitureTileset] = await Promise.all([
+            loadTileset("./assets/floors-walls02.png"),
+            loadTileset("./assets/furniture03.png")
+        ]);
+
     }
 
     render() {
