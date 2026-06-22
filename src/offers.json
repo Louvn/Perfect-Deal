@@ -1,0 +1,14 @@
+{
+    "chair": [
+        {
+            "price": 0.99,
+            "sale": 10,
+            "website": "azamon.netz"
+        },
+        {
+            "price": 130,
+            "sale": 50,
+            "website": "azamon.netz"
+        }
+    ]
+}
