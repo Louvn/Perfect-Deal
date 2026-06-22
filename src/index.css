@@ -12,6 +12,9 @@ body {
 
 .room {
     flex: 4;
+    image-rendering: pixelated;
+    padding: 64px;
+    background-color: #ccc;
 }
 
 .ui {
