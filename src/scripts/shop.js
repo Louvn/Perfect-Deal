@@ -2,6 +2,11 @@ import Renderer from "./renderer.js";
 
 class Shop {
 
+    constructor(budget, onFurnitureBuyed) {
+        this.budget = budget;
+        this.onFurnitureBuyed = onFurnitureBuyed;
+    }
+
     async loadOffers() {
         const offersFound = await fetch("./offers.json");
 
@@ -21,22 +26,30 @@ class Shop {
             const e = offers[idx];
 
             const canvas = productElement.querySelector("canvas");
-            const renderer = new Renderer(canvas);
+            const itemRenderer = new Renderer(canvas);
 
-            await renderer.loadTilesets();
-            renderer.render();
+            await itemRenderer.loadTilesets();
+            itemRenderer.furnitureLayer = [[1]]
+            itemRenderer.render();
 
             productElement.querySelector(".price").textContent = `${e.price}€`;
             productElement.querySelector(".sale").textContent = `-${e.sale}%`;
             productElement.querySelector(".website").textContent = e.website;
-            productElement.querySelector(".buy").addEventListener("click", () => this.buyItem(itemName, ));
+            productElement.querySelector(".buy").addEventListener("click", () => this.buyItem(itemName, idx));
 
             productsDiv.appendChild(productElement);
         }
     }
 
     buyItem(itemName, offerId) {
-        
+        if (!Object.keys(this.offers).includes(itemName)) return;
+
+        const offer = this.offers[itemName][offerId];
+        const realPrice = offer.price - (offer.sale / 100) * offer.price;
+
+        this.budget.minus(realPrice);
+
+        this.onFurnitureBuyed(itemName);
     }
 }
 

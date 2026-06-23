@@ -17,7 +17,7 @@ class Room {
 
         this.room = jsonData.room;
         this.furniture = jsonData.furniture;
-        this.furnitureBuyed = ["bed"];
+        this.furnitureBuyed = [];
 
         console.log("loaded room");
     }
@@ -32,7 +32,7 @@ class Room {
             // iterate over all y 
             for (let y = 0; y < this.renderer.floorWallsLayer.length; y++) {
 
-                this.renderer.furnitureLayer[y] = [];
+                if (!this.renderer.furnitureLayer[y]) this.renderer.furnitureLayer[y] = [];
                 
                 // iterate over all x
                 for (let x = 0; x < this.renderer.floorWallsLayer[y].length; x++) {

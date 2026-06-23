@@ -37,3 +37,13 @@ body {
     border-radius: 4px;
     padding: 2px;
 }
+
+.budget {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 8px;
+    color: white;
+    font-size: 28px;
+    font-family: sans-serif;
+}
