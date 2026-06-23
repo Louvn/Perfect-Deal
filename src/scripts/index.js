@@ -7,4 +7,4 @@ await shop.loadOffers();
 shop.displayOffersForItem("chair");
 
 const room = new Room();
-setTimeout(() => room.renderAll(), 500);
+await room.start();

@@ -1,7 +1,7 @@
 class Renderer {
-    constructor() {
+    constructor(canvas = document.getElementById("roomCanvas")) {
 
-        this.canvas = document.getElementById("roomCanvas");
+        this.canvas = canvas;
         this.tileSize = 16;
         
         this.floorWallsLayer = [];

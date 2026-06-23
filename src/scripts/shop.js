@@ -1,3 +1,5 @@
+import Renderer from "./renderer.js";
+
 class Shop {
 
     async loadOffers() {
@@ -7,7 +9,7 @@ class Shop {
         console.log(`loaded offers for ${Object.keys(this.offers).length} products`);
     }
 
-    displayOffersForItem(itemName) {
+    async displayOffersForItem(itemName) {
         const template = document.getElementById("productTemplate");
         const productsDiv = document.getElementById("productsDiv");
 
@@ -18,7 +20,12 @@ class Shop {
             const productElement = template.content.cloneNode(true);
             const e = offers[idx];
 
-            // productElement.querySelector("img").src = e.img;
+            const canvas = productElement.querySelector("canvas");
+            const renderer = new Renderer(canvas);
+
+            await renderer.loadTilesets();
+            renderer.render();
+
             productElement.querySelector(".price").textContent = `${e.price}€`;
             productElement.querySelector(".sale").textContent = `-${e.sale}%`;
             productElement.querySelector(".website").textContent = e.website;
