@@ -1,182 +1,105 @@
 {
-
-    "bed": [
-
+   "bed": [
+       {
+           "price": 300,
+           "sale": 80,
+           "website": "azamon.netz"
+       },
+       {
+           "price": 350,
+           "sale": 89,
+           "website": "tui.netz"
+       },
+       {
+           "price": 250,
+           "sale": 40,
+           "website": "alexexpress.bi"
+       }
+   ],
+   "carpet": [
+       {
+           "price": 50,
+           "sale": 70,
+           "website": "azamon.netz"
+       },
+       {
+           "price": 60,
+           "sale": 80,
+           "website": "tui.netz"
+       },
+       {
+           "price": 40,
+           "sale": 50,
+           "website": "alexexpress.bi"
+       }
+   ],
+   "tv": [
+       {
+           "price": 100,
+           "sale": 50,
+           "website": "azamon.netz"
+       },
+       {
+           "price": 111,
+           "sale": 60,
+           "website": "tui.netz"
+       },
+       {
+           "price": 90,
+           "sale": 40,
+           "website": "alexexpress.bi"
+       },
+       {
+           "price": 120,
+           "sale": 70
+       }
+   ],
+   "nightshelf": [
+       {
+           "price": 10,
+           "sale": 10,
+           "website": "azamon.netz"
+       },
+       {
+           "price": 20,
+           "sale": 30,
+           "website": "tui.netz"
+       },
+       {
+           "price": 15,
+           "sale": 25,
+           "website": "alexexpress.bi"
+       }
+   ],
+   "shelf": [
+       {
+           "price": 60,
+           "sale": 50,
+           "website": "azamon.netz"
+       },
+       {
+           "price": 80,
+           "sale": 70,
+           "website": "tui.netz"
+       },
+       {
+           "price": 55,
+           "sale": 45,
+           "website": "alexexpress.bi"
+       }
+   ],
+   "curtan": [
         {
-
-            "price": 50,
-
-            "sale": 50,
-
-            "website": "azamon.netz"
-
+            "price": 30,
+            "sale": 50
         },
-
         {
-
-            "price": 60,
-
-            "sale": 70,
-
-            "website": "tui.netz"
-
+            "price": 35,
+            "sale": 60
         },
-
         {
-
-            "price": 55,
-
-            "sale": 60,
-
-            "website": "alexexpress.bi"
-
-        }
-
-    ],
-
-    "table": [
-
-        {
-
             "price": 100,
-
-            "sale": 70,
-
-            "website": "azamon.netz"
-
-        },
-
-        {
-
-            "price": 111,
-
-            "sale": 80,
-
-            "website": "tui.netz"
-
-        },
-
-        {
-
-            "price": 120,
-
-            "sale": 88,
-
-            "website": "alexexpress.bi"
-
+            "sale": 85
         }
-
-    ],
-
-    "closet": [
-
-        {
-
-            "price": 200,
-
-            "sale": 66,
-
-            "website": "azamon.netz"
-
-        },
-
-        {
-
-            "price": 190,
-
-            "sale": 55,
-
-            "website": "tui.netz"
-
-        },
-
-        {
-
-            "price": 195,
-
-            "sale": 60,
-
-            "website": "alexexpress.bi"
-
-        },
-
-        {
-
-            "price": 205,
-
-            "sale": 80
-
-        }
-
-    ],
-
-    "random ah pflanze": [
-
-        {
-
-            "price": 10,
-
-            "sale": 10,
-
-            "website": "azamon.netz"
-
-        },
-
-        {
-
-            "price": 20,
-
-            "sale": 30,
-
-            "website": "tui.netz"
-
-        },
-
-        {
-
-            "price": 15,
-
-            "sale": 25,
-
-            "website": "alexexpress.bi"
-
-        }
-
-    ],
-
-    "picture": [
-
-        {
-
-            "price": 5,
-
-            "sale": 50,
-
-            "website": "azamon.netz"
-
-        },
-
-        {
-
-            "price": 7,
-
-            "sale": 70,
-
-            "website": "tui.netz"
-
-        },
-
-        {
-
-            "price": 3,
-
-            "sale": 1,
-
-            "website": "alexexpress.bi"
-
-        }
-
-    ]
-
+   ]
 }
- 

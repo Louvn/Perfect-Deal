@@ -1,6 +1,6 @@
 class Budget {
     constructor() {
-        this.moneyLeft = 100;
+        this.moneyLeft = 200;
         this.display = document.getElementById("budgetDisplay");
 
         this.displayBudget();
@@ -8,6 +8,11 @@ class Budget {
     
     minus(n) {
         this.moneyLeft -= n;
+        this.budgetChanged();
+    }
+
+    budgetChanged() {
+        if (this.moneyLeft <= 0) location.href = "./gameover.html";
         this.displayBudget();
     }
 

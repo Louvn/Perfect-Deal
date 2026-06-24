@@ -6,6 +6,7 @@ class Renderer {
         
         this.floorWallsLayer = [];
         this.furnitureLayer = [];
+        this.smallItemsLayer = [];
 
     }
 
@@ -19,9 +20,10 @@ class Renderer {
             tileset.onload = () => resolve(tileset);
         });
 
-        [this.floorWallsTileset, this.furnitureTileset] = await Promise.all([
+        [this.floorWallsTileset, this.furnitureTileset, this.smallItemsTileset] = await Promise.all([
             loadTileset("./assets/floors-walls02.png"),
-            loadTileset("./assets/furniture03.png")
+            loadTileset("./assets/furniture03.png"),
+            loadTileset("./assets/small-items02.png")
         ]);
 
     }
@@ -31,7 +33,7 @@ class Renderer {
 
         ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-        for (const layer of [this.floorWallsLayer, this.furnitureLayer]) {
+        for (const layer of [this.floorWallsLayer, this.furnitureLayer, this.smallItemsLayer]) {
 
             const tilemap = layer;
 
@@ -43,6 +45,9 @@ class Renderer {
                 case this.furnitureLayer:
                     tileset = this.furnitureTileset;
                     break; // always break!
+                case this.smallItemsLayer:
+                    tileset = this.smallItemsTileset;
+                    break;
             }
 
             const columns = tileset.width / this.tileSize;

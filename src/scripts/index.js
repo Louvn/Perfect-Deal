@@ -4,9 +4,6 @@ import Budget from "./budget.js";
 
 const budget = new Budget();
 
-const room = new Room();
-await room.start();
-
 const shop = new Shop(budget, e => {
     room.furnitureBuyed.push(e);
     room.renderAll();
@@ -14,3 +11,6 @@ const shop = new Shop(budget, e => {
 
 await shop.loadOffers();
 shop.displayOffersForItem("bed");
+
+const room = new Room(shop);
+await room.start();

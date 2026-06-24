@@ -1,0 +1,84 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #414141;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 4;
+    margin-top: 32px;
+}
+.canvas-container {
+    height: 100%;
+    position: relative;
+}
+.room {
+    image-rendering: pixelated;
+    height: 100%;
+}
+
+.plusIcon {
+    z-index: 10;
+    position: absolute;
+    border: none;
+    background: none;
+}
+.plusIcon img {
+    width: 48px;
+    image-rendering: pixelated;
+}
+
+.phone-container {
+    position: relative;
+    flex: 1;
+    margin: 32px;
+}
+.phone-container img {
+    width: 330px;
+    image-rendering: pixelated;
+}
+.ui {
+    position: absolute;
+    top: 50px;
+    left: 16px;
+    width: 300px;
+    height: 550px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 2px black;
+    padding: 16px;
+    overflow-y: scroll;
+}
+
+.sale {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+}
+.price {
+    font-family: sans-serif;
+}
+.productCanvas {
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.budget {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 8px;
+    color: white;
+    font-size: 28px;
+}

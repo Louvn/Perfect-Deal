@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #232323;
+    gap: 16px;
+    height: 70dvh;
+}
+
+.message {
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.button {
+    color: white;
+    border: 2px solid white;
+    padding: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: "Pixelify Sans", sans-serif;
+}
+.button:hover {
+    transform: scale(1.05);
+}

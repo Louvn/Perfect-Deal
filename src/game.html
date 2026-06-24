@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The perfect Deal</title>
+
+    <link rel="stylesheet" href="./game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <span class="budget" id="budgetDisplay"></span>
+
+    <div class="center">
+        <div class="canvas-container">
+            <canvas class="room" id="roomCanvas" width="200" height="200"></canvas>
+
+            <template id="plusTemplate">
+                <button>
+                    <img src="./assets/plus.png" alt="add">
+                </button>
+            </template>
+        </div>
+    </div>
+    
+    <div class="phone-container">
+
+        <img src="./assets/phone.png" alt="">
+
+        <main class="ui">
+
+            <div id="productsDiv">
+
+                <template id="productTemplate">
+                    <div class="product">
+                        <canvas class="productCanvas" width="32" height="32"></canvas>
+                        <i class="website"></i>
+                        <h2>
+                            <span class="price"></span>
+                            <span class="sale"></span>
+                        </h2>
+                        <button class="buy">Buy</button>
+                    </div>
+                </template>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="./scripts/index.js" type="module"></script>
+</body>
+</html>

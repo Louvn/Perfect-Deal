@@ -9,7 +9,6 @@ class Shop {
 
     async loadOffers() {
         const offersFound = await fetch("./offers.json");
-
         this.offers = await offersFound.json();
         console.log(`loaded offers for ${Object.keys(this.offers).length} products`);
     }
@@ -17,6 +16,7 @@ class Shop {
     async displayOffersForItem(itemName) {
         const template = document.getElementById("productTemplate");
         const productsDiv = document.getElementById("productsDiv");
+        productsDiv.querySelectorAll(".product").forEach(e => e.remove());
 
         const offers = this.offers?.[itemName];
         
