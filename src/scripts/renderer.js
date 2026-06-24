@@ -29,6 +29,7 @@ class Renderer {
     }
 
     render() {
+        this.resize();
         const ctx = this.canvas.getContext("2d");
 
         ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -75,7 +76,11 @@ class Renderer {
                 }
             }
         }
+    }
 
+    resize() {
+        this.canvas.width = (this.floorWallsLayer.length + 1) * this.tileSize;
+        this.canvas.height = (this.floorWallsLayer[0].length - 1) * this.tileSize;
     }
 }
 

@@ -37,7 +37,7 @@ class Room {
         this.renderer.render();
     }
 
-    showPlusIconsFor(entries) {
+    showPlusIconsFor(entries, smallItems = false) {
 
         const template = document.getElementById("plusTemplate");
         const div = document.querySelector(".canvas-container");
@@ -48,7 +48,7 @@ class Room {
 
             const el = template.content.cloneNode(true).querySelector("button");
 
-            el.addEventListener("click", () => this.shop.displayOffersForItem(name));
+            el.addEventListener("click", () => this.shop.displayOffersForItem(name, this.smallItems, this.furniture, this.furnitureBuyed, this.renderer.floorWallsLayer));
             el.classList.add("plusIcon");
 
             const scaleFactor = this.renderer.canvas.getBoundingClientRect().width / this.renderer.canvas.width;

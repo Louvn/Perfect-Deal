@@ -10,7 +10,6 @@ const shop = new Shop(budget, e => {
 })
 
 await shop.loadOffers();
-shop.displayOffersForItem("bed");
 
 const room = new Room(shop);
 await room.start();
