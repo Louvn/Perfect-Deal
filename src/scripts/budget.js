@@ -1,6 +1,6 @@
 class Budget {
     constructor() {
-        this.moneyLeft = 1115;
+        this.moneyLeft = 115;
         this.display = document.getElementById("budgetDisplay");
 
         this.displayBudget();
