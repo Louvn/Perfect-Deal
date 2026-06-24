@@ -35,6 +35,8 @@ class Room {
         this.renderer.smallItemsLayer = transformToTilemap(this.furnitureBuyed, this.smallItems, this.room)
 
         this.renderer.render();
+
+        if (this.furnitureBuyed.length === Object.keys(this.shop.offers).length) location.href = "./win.html";
     }
 
     showPlusIconsFor(entries, smallItems = false) {
