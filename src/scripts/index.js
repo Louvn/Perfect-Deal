@@ -5,7 +5,7 @@ import Budget from "./budget.js";
 const budget = new Budget();
 
 const shop = new Shop(budget, e => {
-    room.furnitureBuyed.push(e);
+    if (!room.furnitureBuyed.includes(e)) room.furnitureBuyed.push(e);
     room.renderAll();
 })
 
