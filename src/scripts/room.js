@@ -1,4 +1,5 @@
 import Renderer from "./renderer.js";
+import transformToTilemap from "./utils/tilemapTransformer.js";
 
 class Room {
     constructor(shop) {
@@ -30,44 +31,18 @@ class Room {
 
         this.renderer.floorWallsLayer = this.room;
 
-        // -- TODO: create function to reuse for small items
-
-        // iterate over all buyed furniture
-        this.furnitureBuyed.forEach((name) => {
-            const piece = this.furniture[name];
-
-            // iterate over all y 
-            for (let y = 0; y < this.renderer.floorWallsLayer.length; y++) {
-
-                if (!this.renderer.furnitureLayer[y]) this.renderer.furnitureLayer[y] = [];
-                
-                // iterate over all x
-                for (let x = 0; x < this.renderer.floorWallsLayer[y].length; x++) {
-
-                    // iterate over all tiles of this piece of furniture
-                    piece.forEach(e => {
-                        if (e[1] === x && e[2] === y) {
-                            this.renderer.furnitureLayer[y][x] = e[0];
-                        } else if (!this.renderer.furnitureLayer[y][x] && this.renderer.furnitureLayer[y][x] !== 0) {
-                            this.renderer.furnitureLayer[y][x] = undefined;
-                        }
-                    })
-                }
-            }
-
-        });
+        this.renderer.furnitureLayer = transformToTilemap(this.furnitureBuyed, this.furniture, this.room);
+        this.renderer.smallItemsLayer = transformToTilemap(this.furnitureBuyed, this.smallItems, this.room)
 
         this.renderer.render();
     }
 
-    showPlusIcons() {
+    showPlusIconsFor(entries) {
 
         const template = document.getElementById("plusTemplate");
         const div = document.querySelector(".canvas-container");
 
-        div.querySelectorAll("button.plusIcon").forEach(e => e.remove());
-
-        for (let [name, data] of Object.entries(this.furniture)) {
+        for (let [name, data] of entries) {
 
             if (this.furnitureBuyed.includes(name)) continue;
 
@@ -79,10 +54,21 @@ class Room {
             const scaleFactor = this.renderer.canvas.getBoundingClientRect().width / this.renderer.canvas.width;
             const realTileSize = scaleFactor * this.renderer.tileSize;
 
-            el.style.top = `${data[0][2] * realTileSize}px`;
-            el.style.left = `${data[0][1] * realTileSize}px`;
+            el.style.top = `${data[data.length-1][2] * realTileSize}px`;
+            el.style.left = `${data[data.length-1][1] * realTileSize}px`;
 
             div.appendChild(el);
+        }
+    }
+
+    showPlusIcons() {
+        const div = document.querySelector(".canvas-container");
+        div.querySelectorAll("button.plusIcon").forEach(e => e.remove());
+
+        this.showPlusIconsFor(Object.entries(this.furniture));
+
+        if (this.furnitureBuyed.length === Object.keys(this.furniture).length) {
+            this.showPlusIconsFor(Object.entries(this.smallItems));
         }
     }
 }

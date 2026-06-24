@@ -56,7 +56,7 @@ class Renderer {
                 for (let x = 0; x < tilemap[y].length; x++) {
 
                     const tileId = tilemap[y][x];
-
+            
                     ctx.drawImage(
                         tileset,
 

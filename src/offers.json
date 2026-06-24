@@ -1,105 +1,186 @@
 {
-   "bed": [
-       {
-           "price": 300,
-           "sale": 80,
-           "website": "azamon.netz"
-       },
-       {
-           "price": 350,
-           "sale": 89,
-           "website": "tui.netz"
-       },
-       {
-           "price": 250,
-           "sale": 40,
-           "website": "alexexpress.bi"
-       }
-   ],
-   "carpet": [
-       {
-           "price": 50,
-           "sale": 70,
-           "website": "azamon.netz"
-       },
-       {
-           "price": 60,
-           "sale": 80,
-           "website": "tui.netz"
-       },
-       {
-           "price": 40,
-           "sale": 50,
-           "website": "alexexpress.bi"
-       }
-   ],
-   "tv": [
-       {
-           "price": 100,
-           "sale": 50,
-           "website": "azamon.netz"
-       },
-       {
-           "price": 111,
-           "sale": 60,
-           "website": "tui.netz"
-       },
-       {
-           "price": 90,
-           "sale": 40,
-           "website": "alexexpress.bi"
-       },
-       {
-           "price": 120,
-           "sale": 70
-       }
-   ],
-   "nightshelf": [
-       {
-           "price": 10,
-           "sale": 10,
-           "website": "azamon.netz"
-       },
-       {
-           "price": 20,
-           "sale": 30,
-           "website": "tui.netz"
-       },
-       {
-           "price": 15,
-           "sale": 25,
-           "website": "alexexpress.bi"
-       }
-   ],
-   "shelf": [
-       {
-           "price": 60,
-           "sale": 50,
-           "website": "azamon.netz"
-       },
-       {
-           "price": 80,
-           "sale": 70,
-           "website": "tui.netz"
-       },
-       {
-           "price": 55,
-           "sale": 45,
-           "website": "alexexpress.bi"
-       }
-   ],
-   "curtan": [
-        {
-            "price": 30,
-            "sale": 50
-        },
-        {
-            "price": 35,
-            "sale": 60
-        },
-        {
-            "price": 100,
-            "sale": 85
-        }
-   ]
+ "bed": [
+   {
+     "price": 300,
+     "sale": 80,
+     "website": "azamon.netz"
+   },
+   {
+     "price": 350,
+     "sale": 89,
+     "website": "tui.netz"
+   },
+   {
+     "price": 250,
+     "sale": 40,
+     "website": "alexexpress.bi"
+   },
+   {
+     "price": 600,
+     "sale": 96,
+     "website": "andi.bab"
+   },
+   {
+     "price": 150,
+     "sale": 1,
+     "website": "nordsüd.we"
+   }
+ ],
+ "carpet": [
+   {
+     "price": 50,
+     "sale": 70,
+     "website": "azamon.netz"
+   },
+   {
+     "price": 60,
+     "sale": 80,
+     "website": "tui.netz"
+   },
+   {
+     "price": 40,
+     "sale": 50,
+     "website": "alexexpress.bi"
+   },
+   {
+     "price": 100,
+     "sale": 95,
+     "website": "nordsüd.we"
+   },
+   {
+     "price": 30,
+     "sale": 5,
+     "website": "andi.bab"
+   }
+ ],
+ "tv": [
+   {
+     "price": 100,
+     "sale": 50,
+     "website": "azamon.netz"
+   },
+   {
+     "price": 111,
+     "sale": 60,
+     "website": "tui.netz"
+   },
+   {
+     "price": 90,
+     "sale": 40,
+     "website": "alexexpress.bi"
+   },
+   {
+     "price": 120,
+     "sale": 70,
+     "website": "western.eu"
+   },
+   {
+     "price": 80,
+     "sale": 35,
+     "website": "andi.bab"
+   }
+ ],
+ "nightshelf": [
+   {
+     "price": 10,
+     "sale": 10,
+     "website": "azamon.netz"
+   },
+   {
+     "price": 20,
+     "sale": 30,
+     "website": "tui.netz"
+   },
+   {
+     "price": 15,
+     "sale": 25,
+     "website": "alexexpress.bi"
+   },
+   {
+     "price": 50,
+     "sale": 95,
+     "website": "western.eu"
+   }
+ ],
+ "shelf": [
+   {
+     "price": 60,
+     "sale": 50,
+     "website": "azamon.netz"
+   },
+   {
+     "price": 80,
+     "sale": 70,
+     "website": "tui.netz"
+   },
+   {
+     "price": 55,
+     "sale": 45,
+     "website": "alexexpress.bi"
+   },
+   {
+     "price": 101,
+     "sale": 80,
+     "website": "western.eu"
+   },
+   {
+     "price": 40,
+     "sale": 30,
+     "website": "nordsüd.we"
+   }
+ ],
+ "curtan": [
+   {
+     "price": 30,
+     "sale": 50,
+     "website": "alexexpress.bi"
+   },
+   {
+     "price": 35,
+     "sale": 40,
+     "website": "nordsüd.we"
+   },
+   {
+     "price": 100,
+     "sale": 85,
+     "website": "western.eu"
+   },
+   {
+     "price": 120,
+     "sale": 95,
+     "website": "andi.bab"
+   },
+   {
+     "price": 30,
+     "sale": 10,
+     "website": "tui.netz"
+   }
+ ],
+ "alarm": [
+   {
+       "price": 5,
+       "sale": 5,
+       "website": "tui.netz"
+   },
+   {
+       "price": 10,
+       "sale": 55,
+       "website": "azamon.netz"
+   },
+   {
+       "price": 20,
+       "sale": 80,
+       "website": "andi.bab"
+   },
+   {
+       "price": 7,
+       "sale": 35,
+       "website": "nordsüd.we"
+   },
+   {
+       "price": 50,
+       "sale": 97,
+       "website": "tui.netz"
+   }
+  ]
 }
