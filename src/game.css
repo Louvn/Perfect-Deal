@@ -107,6 +107,10 @@ body {
     border-radius: 8px;
     color: white;
     font-size: 16px;
+    transition: all 0.5s ease;
+}
+.buy:hover {
+    background-color: darkred;
 }
 
 .budget {
