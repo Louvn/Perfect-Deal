@@ -36,7 +36,7 @@ class Room {
 
         this.renderer.render();
 
-        if (this.furnitureBuyed.length === Object.keys(this.shop.offers).length) location.href = "./win.html";
+        if (this.furnitureBuyed.length === Object.keys(this.shop.offers).length) location.href = `./win.html?money=${this.shop.budget.moneyLeft}`;
     }
 
     showPlusIconsFor(entries, smallItems = false) {
@@ -69,7 +69,7 @@ class Room {
 
         this.showPlusIconsFor(Object.entries(this.furniture));
 
-        if (this.furnitureBuyed.length === Object.keys(this.furniture).length) {
+        if (this.furnitureBuyed.length >= Object.keys(this.furniture).length) {
             this.showPlusIconsFor(Object.entries(this.smallItems));
         }
     }

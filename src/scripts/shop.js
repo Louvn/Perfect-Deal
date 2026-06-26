@@ -25,6 +25,8 @@ class Shop {
         productsHeading.textContent = `${offers.length} Offers`;
         
         for (let idx = 0; idx < offers.length; idx++) {
+
+            document.getElementById("hints").style.display = "none";
             
             const productElement = template.content.cloneNode(true);
             const e = offers[idx];

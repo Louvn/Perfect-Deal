@@ -1,6 +1,7 @@
 import Shop from "./shop.js";
 import Room from "./room.js";
 import Budget from "./budget.js";
+import Leaderboard from "./leaderboard.js";
 
 const budget = new Budget();
 

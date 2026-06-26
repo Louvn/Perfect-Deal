@@ -182,5 +182,103 @@
        "sale": 97,
        "website": "tui.netz"
    }
-  ]
+  ],
+  "calendar": [
+   {
+       "price": 5,
+       "sale": 20,
+       "website": "andi.baba"
+   },
+   {
+       "price": 10,
+       "sale": 55,
+       "website": "azamon.netz"
+   },
+   {
+       "price": 7,
+       "sale": 30,
+       "website": "tui.netz"
+   },
+   {
+       "price": 20,
+       "sale": 85,
+       "website": "western.eu"
+   }
+ ],
+ "picture": [
+   {
+       "price": 9,
+       "sale": 40,
+       "website": "nordsüd.we"
+   },
+   {
+       "price": 7,
+       "sale": 30,
+       "website": "tui.netz"
+   },
+   {
+       "price": 11,
+       "sale": 50,
+       "website": "western.eu"
+   },
+   {
+       "price": 6,
+       "sale": 10,
+       "website": "alexexpress.bi"
+   },
+   {
+       "price": 15,
+       "sale": 60,
+       "website": "azamon.netz"
+   }
+ ],
+ "plant": [
+   {
+       "price": 4,
+       "sale": 50,
+       "website": "andi.baba"
+   },
+   {
+       "price": 5,
+       "sale": 60,
+       "website": "azamon.netz"
+   },
+   {
+       "price": 7,
+       "sale": 70,
+       "website": "alexexpress.bi"
+   },
+   {
+       "price": 3,
+       "sale": 5,
+       "website": "tui.netz"
+   }
+ ],
+ "watering_can": [
+   {
+       "price": 8,
+       "sale": 50,
+       "website": "tui.netz"
+   },
+   {
+       "price": 7,
+       "sale": 40,
+       "website": "azamon.netz"
+   },
+   {
+       "price": 6,
+       "sale": 30,
+       "website": "nordsüd.we"
+   },
+   {
+       "price": 9,
+       "sale": 60,
+       "website": "western.eu"
+   },
+   {
+       "price": 10,
+       "sale": 70,
+       "website": "andi.baba"
+   }
+ ]
 }

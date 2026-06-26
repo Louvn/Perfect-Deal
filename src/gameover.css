@@ -24,3 +24,7 @@ body {
 .button:hover {
     transform: scale(1.05);
 }
+#money {
+    color: white;
+    font-family: sans-serif;
+}

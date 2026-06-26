@@ -113,6 +113,12 @@ body {
     background-color: darkred;
 }
 
+#hints {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .budget {
     position: fixed;
     top: 0;
